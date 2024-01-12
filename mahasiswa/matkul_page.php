@@ -1,4 +1,3 @@
-<!-- tabel data matkul -->
 <div class="tabel-page">
     <div class="tabel-heading">
         Daftar Mata kuliah Yang Diambil
@@ -12,7 +11,7 @@
                 <th><h5>Semester</h5></th>
             </tr>
         </thead>
-        <!-- Ambil data matkul -->
+
         <?php
             include "../config/db_connection.php";
 
@@ -25,7 +24,7 @@
             if (mysqli_num_rows($result) > 0){
                 while($row = mysqli_fetch_assoc($result)){
         ?>  
-                <!-- Tampil data matkul -->
+
                 <tr>
                     <td><?php echo $row["ID_Matkul"];?></td>
                     <td><?php echo $row["Nama_Matkul"];?></td>
