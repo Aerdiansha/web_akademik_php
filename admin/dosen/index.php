@@ -9,7 +9,6 @@
     }
 ?>
 
-<!-- Tabel Data Dosen -->
 <div class="tabel-page">
     <div class="tabel-heading">
         Data Dosen
@@ -30,7 +29,6 @@
             </tr>
         </thead>
 
-        <!-- Ambil Data Dosen -->
         <?php
             include "../config/db_connection.php";
 
@@ -42,7 +40,6 @@
                 while($row = mysqli_fetch_assoc($result)) {
         ?>
 
-        <!-- Tampil Data Dosen -->
         <tr>
             <td><?php echo $row["ID_Dosen"];?></td>
             <td><?php echo $row["Nama_Dosen"];?></td>
@@ -61,9 +58,7 @@
             </td>
         </tr>
 
-        <!-- Modal Update Data -->
          <div id="myModal<?php echo $i?>" class="modal">
-            <!-- Modal Contetn -->
             <div class="modal-content">
                 <div class="modal-header">
                     <span class="close" id="close<?php echo $i?>">&times;</span>
@@ -95,9 +90,7 @@
     </table>
 </div>
 
-<!-- Modal Input Data -->
 <div id="myModal0" class="modal">
-    <!-- Modal Content -->
     <div class="modal-content">
         <div class="modal-header">
             <span class="close" id="close0">&times;</span>
