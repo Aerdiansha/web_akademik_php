@@ -8,7 +8,6 @@
         $sql = "DELETE FROM jadwal WHERE ID_Jadwal='$id'";
         $res = $conn->query($sql);
 
-        // Delete Mengajar
         $sql = "DELETE FROM jadwal WHERE ID_Matkul='$id_matkul' AND ID_Dosen='$id_dosen'";
         $res = $conn->query($sql);
         mysqli_close($conn);
