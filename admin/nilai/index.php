@@ -1,4 +1,3 @@
-<!--Check Ststus tambah data-->
 <?php
     if(!isset($_GET['page'])){
         include "../session_check.php";
@@ -9,7 +8,6 @@
     }
 ?>
 
-<!-- Tabel List Mahasiswa -->
 <div class="tabel-page">
     <div class="tabel-heading">
         Data Nilai
@@ -39,7 +37,7 @@
                     <th><h5>Detail Nilai</h5></th>
                 </tr>
             </thead>
-            <!-- Kode untuk mengambil data dosen -->
+
             <?php
                 include "../config/db_connection.php";
 
@@ -56,7 +54,7 @@
                     $i = 1;
                     while ($row = mysqli_fetch_assoc($result)) {
             ?>       
-                    <!-- Menampilkan data mahasiswa -->
+
                     <tr>
                         <td><?php echo $row["NIM"];?></td>
                         <td><?php echo $row["Nama_Mhs"];?></td>
@@ -82,18 +80,18 @@
     <div style="clear: both;"></div>
 </div>
 
-<!-- Menampilkan Detail Nilai Mahasiswa -->
+
 <?php
 if(isset($_GET['detail'])){
     $nim = "'".$_GET['detail']."'";
     $a_nim = $_GET['detail'];
 
     include "../config/db_connection.php";
-    // Get Data Mata Kuliah
+
     $sql_matkul = "SELECT * FROM mata_kuliah";
     $result_matkul = mysqli_query($conn, $sql_matkul);
 
-    // Get Data Nilai
+
     $sql = "SELECT * FROM nilai as n
             INNER JOIN mahasiswa as m ON n.NIM = ".$nim." AND m.NIM = n.NIM
             INNER JOIN mata_kuliah as mk ON mk.ID_Matkul = m.ID_Matkul";
@@ -141,9 +139,8 @@ if(isset($_GET['detail'])){
                     </td>
                 </tr>
 
-                <!-- Modal Update Data Nilai -->
+
                 <div id="myModal<?php echo $i?>" class="modal">
-                    <!-- Modal Content -->
                     <div class="modal-content">
                         <div class="modal-header">
                             <span class="close" id="close<?php echo $i?>">&times;</span>
@@ -185,7 +182,6 @@ if(isset($_GET['detail'])){
             ?>
         </table>
     </div>
-    <!-- Modal untuk input data nilai -->
     <div id="myModal0" class="modal">
         <div class="modal-content">
             <div class="modal-header">
