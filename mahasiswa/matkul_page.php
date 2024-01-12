@@ -5,7 +5,7 @@
 
 
 
-<!-- rabel data matkul -->
+<!-- tabel data matkul -->
 <div class="tabel-page">
     <div class="tabel-heading">
         Daftar Matakuliah Yang Diambil
