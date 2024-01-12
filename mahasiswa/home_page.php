@@ -1,5 +1,5 @@
 <?php
-//dibuat sama bayu
+
     session_start();
     if(!isset($_SESSION['logged-in']))
     {
