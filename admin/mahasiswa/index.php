@@ -4,7 +4,6 @@
     }
     include "../config/db_connection.php";
 
-    //Cek Session
     if(!isset($_SESSION['logged-in'])){
         include "../session_check.php";
     }
@@ -57,9 +56,7 @@
                     </td>
                 </tr>
 
-                <!--Modal Update-->
                 <div id="myModal<?php echo $i?>" class="modal">
-                    <!--Modal Update-->
                     <div class="modal-content">
                         <div class="modal-header">
                             <span class="close" id="close<?php echo $i?>">&times;</span>
@@ -96,9 +93,7 @@
     </table>
 </div>
 
-<!--Modal untuk input data baru-->
 <div id="myModal0" class="modal">
-    <!--Modal Content-->
     <div class="modal-content">
         <div class="modal-header">
             <span class="close" id="close0">&times;</span>
