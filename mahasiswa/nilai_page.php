@@ -1,7 +1,3 @@
-<?php
-
-?>
-
 <div class="tabel-page">
     <div class="tabel-heading">
         <b>Daftar Nilai Akademis</b>
