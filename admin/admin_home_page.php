@@ -1,5 +1,5 @@
 <?php
-//DIBUAT OLEH BAYU ABDILLAH
+
     session_start();
     if (!isset($_SESSION['logged-in']))
     {
