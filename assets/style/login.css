@@ -1,4 +1,3 @@
-/* Warna Background */
 body,
 html {
     margin: 0;
@@ -8,7 +7,6 @@ html {
     background-image: linear-gradient(#94d4f3, #5564d6) !important;
 }
 
-/* Login Form */
 .login-container {
     width: 400px;
     height: 350px;
