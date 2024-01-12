@@ -1,4 +1,3 @@
-<!--Check status tambah data-->
 <?php
     if(!isset($_GET['page'])){
         include "../session_check.php";
@@ -9,7 +8,6 @@
     }
 ?>
 
-<!--tabel data dosen-->
 <div class="tabel-page">
     <div class="tabel-heading">
         Data Mata Kuliah
@@ -31,7 +29,7 @@
                 <th><h5>Delete</h5></th>
             </tr>
         </thead>
-        <!--Kode untuk mengambil data dosen-->
+
         <?php
             include "../config/db_connection.php";
 
@@ -42,7 +40,7 @@
                 $i = 1;
                 while($row = mysqli_fetch_assoc($result)) {
         ?>    
-                <!--Menampilkan data dosen-->
+
                 <tr>
                     <td><?php echo $row['ID_Matkul'];?></td>
                     <td><?php echo $row['Nama_Matkul'];?></td>
@@ -63,9 +61,8 @@
                     </td>
                 </tr>
                 
-                <!--Modal Update Data-->
                 <div id="myModal<?php echo $i?>" class="modal">
-                    <!--Modal Content-->
+
                     <div class="modal-content">
                         <div class="modal-header">
                             <span class="close" id="close<?php echo $i?>">&times;</span>
@@ -101,9 +98,8 @@
     </table>
 </div>
 
-<!--Modal Input Data-->
+
 <div id="myModal0" class="modal">
-    <!--Modal Content-->
     <div class="modal-content">
         <div class="modal-header">
             <span class="close" id="close0">&times;</span>
