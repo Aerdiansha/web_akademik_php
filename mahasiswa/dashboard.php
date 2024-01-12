@@ -14,7 +14,7 @@
     $ipk = countIPK($result);
 
     //untk cek hari
-    $arr_hari = array("Ahad", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu");
+    $arr_hari = array("Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu");
     $id_hari = date('w');
 
     $hari = "'".$arr_hari[$id_hari]."'";
