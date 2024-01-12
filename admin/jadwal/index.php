@@ -9,7 +9,6 @@
     }
 ?>
 
-<!-- Tabel Data Jadwal -->
 <div class="tabel-page">
     <div class="tabel-heading">
         Data Jadwal Mengajar
@@ -20,7 +19,7 @@
             <label for="fdosen">Dosen: <input list="dosen" name="dosen" type="text">
         </label>
         <datalist id="dosen">  
-        <!-- Select Data Dosen -->
+
         <?php
         include "../config/db_connection.php";
 
@@ -63,7 +62,6 @@
                 </tr>
             </thead>
 
-            <!-- Ambil Data Dosen -->
             <?php
                 $id_dosen = "'KO'";
                 if(isset($_GET['dosen'])){
@@ -83,7 +81,7 @@
                     $i = 1;
                     while($row = mysqli_fetch_assoc($result)) {
             ?>
-                    <!-- Tampil Data Dosen -->
+
                         <tr>
                             <td><?php echo $row["Nama_Dosen"];?></td>
                             <td><?php echo $row["Nama_Matkul"];?></td>
@@ -108,9 +106,8 @@
                             </td>
                         </tr>
 
-                        <!-- Modal Update -->
+
                         <div id="myModal<?php echo $i?>" class="modal">
-                            <!-- Modal Content -->
                             <div class="modal-content">
                                 <div class="modal-header">
                                 <span class="close" id="close<?php echo $i?>">&times;</span>
@@ -119,16 +116,12 @@
                                 </div>
                                 <div class="modal-body">
                                     <form name="input" method="post" action="jadwal/jadwal_mengajar_update.php">
-                                        <!--ID JAdwal Sebemlumnya-->
                                         <input type="hidden" name="old_id" value="<?php echo $row['ID_Jadwal']?>">
                                         <input type="hidden" name="old_id_dosen" value="<?php echo $row['ID_Dosen']?>">
-                                        <!--Nama Dosen-->
                                         <label for="fid">Nama Dosen</label>
                                         <input type="text" id="fid" value="<?php echo $row['ID_Dosen']?>" maxlength="7" required>
-                                        <!--Nama Matkul-->
                                         <label for="fnama">Nama Mata Kuliah</label>
                                         <input type="text" id="fnama" value="<?php echo $row['Nama_Ruangan']?>" required>
-                                        <!--Hari-->
                                         <label for="fnama">Hari</label>
                                         <input type="text" id="fnama" list="hari" name="hari" value="<?php echo $row['Hari']?>" required>
                                         <datalist id="hari">
@@ -139,12 +132,10 @@
                                             <option value="Jumat"></option>
                                             <option value="Sabtu"></option>
                                         </datalist>
-                                        <!--Ruangan-->
                                         <label for="fdosen">Ruangan <input list="ruangan" name="ruangan" type="text" value="
                                         <?php echo $row['ID_Ruangan']?>">
                                         </label>
                                         <datalist id="ruangan">
-                                            <!--Select Data Ruangan-->
                                             <?php
                                             $sql_r = "SELECT * FROM ruangan";
                                             $result_r = mysqli_query($conn, $sql_r);
@@ -159,7 +150,6 @@
                                             }
                                             ?>
                                         </datalist>
-                                        <!--Jam-->
                                         <label for="fjam">Jam</label>
                                         <br>
                                         <input type="time" name="j_masuk" step="1" value="<?php echo $row['Jam_Masuk']?>"> -
@@ -181,23 +171,17 @@
     <div style="clear: both;"></div>
 </div>
 
-<!-- GET Data Dosen, Matkul Ruangan -->
 <?php
     include "../config/db_connection.php";
-    //Dosen
     $sql_dosen = "SELECT * FROM dosen";
     $dosen = mysqli_query($conn, $sql_dosen);
-    //Matakuliah
     $sql_matkul = "SELECT * FROM mata_kuliah";
     $matkul = mysqli_query($conn, $sql_matkul);
-    //Ruangan
     $sql_r = "SELECT * FROM ruangan";
     $ruangan = mysqli_query($conn, $sql_r);
 ?>
 
-<!-- Modal Input Data  -->
 <div id="myModal0" class="modal">
-    <!-- Modal Content -->
     <div class="modal-content">
         <div class="modal-header">
             <span class="close" id="close0">&times;</span>
@@ -206,11 +190,9 @@
         </div>
         <div class="modal-body">
             <form name="input" method="post" action="jadwal/jadwal_mengajar_input.php">
-                <!-- Data Dosen -->
                 <label for="fdosen">Dosen: <input type="text" name="dosen" list="dosen">
                 </label>
                 <datalist id="dosen">
-                    <!-- Select data dosen -->
                     <?php
                     while($l_dosen = mysqli_fetch_assoc($dosen)) {
                     ?>
@@ -221,11 +203,9 @@
                     }
                     ?>
                 </datalist>
-                <!-- data matkul -->
                 <label for="fmatkul">Mata Kuliah: <input list="matkul" name="matkul" type="text">
                 </label>
                 <datalist id="matkul">
-                    <!-- Select data matkul -->
                     <?php
                     while($l_matkul = mysqli_fetch_assoc($matkul)) {
                     ?>
@@ -236,11 +216,9 @@
                     }
                     ?>
                 </datalist>
-                <!-- Data Ruangan -->
                 <label for="fruangan">Ruangan: <input list="ruangan" name="ruangan" type="text">
                 </label>
                 <datalist id="ruangan">
-                    <!-- Select data ruangan -->
                     <?php
                     while($l_r = mysqli_fetch_assoc($ruangan)) {
                     ?>
@@ -252,7 +230,6 @@
                     ?>
                 </datalist>
 
-                <!-- Data Hari -->
                 <label for="hari">Hari: <input list="hari" name="hari" type="text">
                 </label>
                 <datalist>
@@ -263,7 +240,6 @@
                     <option value="Jumat"></option>
                     <option value="Sabtu"></option>
                 </datalist>
-                <!-- Jam -->
                 <label for="fjam">Jam</label>
                 <br>
                 <input type="time" name="j_masuk" step="1"> - <input type="time" name="j_keluar" step="1">
