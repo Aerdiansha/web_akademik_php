@@ -1,9 +1,7 @@
-<!-- Cek Status tambah data -->
 <?php
-    //include
     include "../config/db_connection.php";
     include "ipk.php";
-    //Get Data dnilai
+
     $sql = "SELECT * FROM nilai as n
             INNER JOIN mahasiswa as m ON m.NIM = ".$_SESSION['nim']." AND m.NIM = n.NIM
             INNER JOIN mata_kuliah as mk ON mk.ID_Matkul = n.ID_Matkul
@@ -13,13 +11,12 @@
 
     $ipk = countIPK($result);
 
-    //untk cek hari
+
     $arr_hari = array("Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu");
     $id_hari = date('w');
 
     $hari = "'".$arr_hari[$id_hari]."'";
 
-    // Pengambilan Data jadwal hari ini
     $sql = "SELECT * FROM nilai as n
             INNER JOIN jadwal as j ON n.NIM =".$_SESSION['nim']." AND n.ID_Matkul = j.ID_Matkul AND j.Hari = ".$hari." 
             INNER JOIN mata_kuliah as mk ON j.ID_Matkul = mk.ID_Matkul
@@ -41,7 +38,6 @@
     </div>
 </div>
 
-<!-- Tabel Jadwal Kuliah -->
 <div class="tabel-page">
     <div class="tabel-heading">
         Jadwal Kuliah Hari Ini
@@ -55,14 +51,12 @@
                 <th><h5>Waktu</h5></th>
             </tr>
         </thead>
-        <!-- Kode untuk mengambil data dosen -->
+
         <?php
-
-
         if (mysqli_num_rows($result) > 0) {
             while($row = mysqli_fetch_assoc($result)) {
         ?>
-            <!-- Tampil Data Dosen -->
+
             <tr>
                 <td><?php echo $row["Nama_Dosen"];?></td>
                 <td><?php echo $row["Nama_Matkul"];?></td>
