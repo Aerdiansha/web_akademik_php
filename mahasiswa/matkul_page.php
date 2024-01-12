@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 <!-- tabel data matkul -->
 <div class="tabel-page">
     <div class="tabel-heading">
