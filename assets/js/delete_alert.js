@@ -1,5 +1,4 @@
- // Untuk konfirmasi delete data
- function hapusData(id, identifier){
+  function hapusData(id, identifier){
     console.log(id);
     if(confirm("Apakah anda yakin akan menghapus data ini?")){
         switch(identifier){
