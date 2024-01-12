@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
 
-
-
-
 .modal {
     font: 16px/1.5 "Lato", sans-serif;
     display: none;
@@ -16,7 +13,6 @@
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
 }
-
 
 .modal-content {
     position: relative;
