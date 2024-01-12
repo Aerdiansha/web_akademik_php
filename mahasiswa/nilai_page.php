@@ -15,7 +15,7 @@
         <?php
         include "../config/db_connection.php";
 
-        // get Data nilai
+
         $sql = "SELECT * FROM nilai as n
                 INNER JOIN mahasiswa as m ON m.NIM = ".$_SESSION['nim']." AND m.NIM = n.NIM
                 INNER JOIN mata_kuliah as mk ON mk.ID_Matkul = n.ID_Matkul
