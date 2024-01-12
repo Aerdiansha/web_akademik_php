@@ -1,2 +1,2 @@
-# web_akademik_php
+# web akademik php
 Untuk memenuhi tugas Pemrograman aplikasi berbasis web
