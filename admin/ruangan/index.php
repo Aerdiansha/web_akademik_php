@@ -1,4 +1,3 @@
-<!-- Check Status Tambah Data -->
 <?php
     if(!isset($_GET['page'])){
         include "../session_check.php";
