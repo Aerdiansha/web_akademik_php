@@ -29,7 +29,7 @@ ul {
 .container {
     width: 100%;
 }
-/* Header Style */
+
 .page-header {
     position: fixed;
     margin: 0;
@@ -90,20 +90,17 @@ ul {
     padding-right: 10px;
 }
 
-/* Dropdown */
 .dropdown-container {
     display: none;
     background-color: #5564D6;
     padding-left: 8px;
 }
 
-/* Optional : style the caret down icon*/
 .fa-caret-down {
     float: right;
     padding-right: 8px;
 }
 
-/* Content Style */
 .page-content {
     margin: 0;
     background-color: #cad0fc;
