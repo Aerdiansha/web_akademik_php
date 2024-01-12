@@ -8,7 +8,6 @@
     }
 ?>
 
-<!-- Tabel Data ruangan -->
 <div class="tabel-page">
     <div class="tabel-heading">
         Data Ruangan
@@ -28,7 +27,7 @@
                 <th><h5>Delete</h5></th>
             </tr>
         </thead>
-        <!-- Kode untuk mengambil data ruangan -->
+        
         <?php
             include "../config/db_connection.php";
 
@@ -39,7 +38,7 @@
                 $i = 1;
                 while($row = mysqli_fetch_assoc($result)) {
         ?>
-                <!-- Menampilkan Data Dosen -->
+              
                 <tr>
                     <td><?php echo $row["ID_Ruangan"];?></td>
                     <td><?php echo $row["Nama_Ruangan"];?></td>
@@ -58,9 +57,9 @@
                     </td>
                 </tr>
 
-                <!--MOdal Update Data-->
+              
                 <div id="myModal<?php echo $i?>" class="modal">
-                    <!-- Modal Content -->
+                 
                     <div class="modal-content">
                         <div class="modal-header">
                             <span class="close" id="close<?php echo $i?>">&times;</span>
@@ -91,9 +90,9 @@
     </table>
 </div>
 
-<!-- Modal Input Data -->
+
 <div id="myModal0" class="modal">
-    <!-- Modal content -->
+ 
     <div class="modal-content">
         <div class="modal-header">
             <span class="close" id="close0">&times;</span>
