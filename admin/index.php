@@ -4,7 +4,7 @@
     {
         echo '<script>alert("Username atau Password yang dimasukan salah")</script>';
     }
-    //destroy the session
+
     session_destroy();
 ?>
 
