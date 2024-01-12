@@ -1,7 +1,7 @@
 <!-- tabel data matkul -->
 <div class="tabel-page">
     <div class="tabel-heading">
-        Daftar Matakuliah Yang Diambil
+        Daftar Mata kuliah Yang Diambil
     </div>
     <table id="list-data" class="display">
         <thead>
