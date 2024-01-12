@@ -5,7 +5,6 @@
 // }
 ?>
 
-<!-- Tabel Data Dosen -->
 <div class="tabel-page">
     <div class="tabel-heading"> 
         Daftar Dosen yang Mengajar
@@ -17,7 +16,7 @@
                 <th><h5>Nama Dosen</h5></th>
             </tr>
         </thead>    
-        <!-- Kode untuk mengambil data dosen --> 
+
         <?php
         include "../config/db_connection.php";
 
@@ -31,7 +30,7 @@
         if (mysqli_num_rows($result) > 0) {
             while($row = mysqli_fetch_assoc($result)) {
         ?>
-            <!-- Menampilkan Data Dosen -->
+
             <tr>
             <td><?php echo $row["ID_Dosen"]; ?></td> 
             <td><?php echo $row["Nama_Dosen"]; ?></td>
